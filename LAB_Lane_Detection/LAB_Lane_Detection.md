@@ -112,10 +112,13 @@ The probabilistic Hough transform `HouglinesP` randomly extracts coordinates to 
 
 For each edge of the image, increase the vote at $H[\rho_k, \theta_k]$ for each $\rho$ and $\theta$ obtained.
 And find where $\hat H[\hat \rho, \hat \theta]$ score is at maximum. The detected line in the image  is given by $x=\hat \rho (cos\hat \theta), y=\hat \rho (sin\hat \theta)$.
-<img src="image/accumulate.png" alt="image" style="display: block; margin: auto; zoom:58%;" /><br>
+<div align="center">
+    <img src="image/accumulate.png" alt="image" style="zoom:60%;" />
+</div>
 
-<img src="image/HoughlinesP.png" alt="image" style="display: block; margin: auto; zoom:70%;" /><br>
-
+<div align="center">
+    <img src="image/HoughlinesP.png" alt="image" style="zoom:70%;" />
+</div>
 
 ### Linear regression
 With `HoughlinesP` we can get many lines. We use Linear regression to determine one straight line per lane. We can 
@@ -127,7 +130,7 @@ Additionally, the vanishing point where the two lanes meet can be found by using
 
 > $$(x_1,y_1), (x_2,y_2),\cdots, (x_m,y_m)$$
 > $$y=c_0x+c_1$$
-> $$A = \begin{bmatrix} x_1^1 & x_1^0 \\ x_2^1 & x_2^0 \\ \vdots & \vdots \\ x_m^1 & x_m^0 \end{bmatrix},Y=\begin{bmatrix}y_1\\y_2\\\vdots\\y_m\end{bmatrix}, C= [c_0, c_1]$$
+> $$A = \begin{bmatrix} x_1^1 & x_1^0 \\ x_2^1 & x_2^0 \\ \vdots & \vdots \\ x_m^1 & x_m^0 \end{bmatrix},Y=\begin{bmatrix}y_1 \\ y_2 \\ \vdots \\ y_m\end{bmatrix}, C= [c_0, c_1]$$
 > $$A^TA\cdot C=A^TY \rightarrow C=(A^TA)^{-1}A^TY$$
 
  
@@ -140,7 +143,7 @@ Additionally, the vanishing point where the two lanes meet can be found by using
 </div>
 
 <div align="center">
-    <img src="image/get_one_lane.png" alt="image" style="zoom:70%;" />
+    <img src="image/get_one_lane.png" alt="image" style="zoom:67%;" />
 </div>
 
 
@@ -156,6 +159,7 @@ The result of lane detection is shown with lines and vanishing point in Figure 6
 <div align="center">
     <img src="image/Result.png" alt="image" style="zoom:70%;" />
 </div>
+
 **Demo Video: [Youtube](https://youtu.be/gZ0gcyRrom4)**
 
 
