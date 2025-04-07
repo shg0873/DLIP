@@ -58,8 +58,10 @@ Additionally, the vanishing point and the left and right lane approximation equa
 ## 1. Overview
 The image below is a flowchart representing the entire algorithm process.
 
-<img src="image/flow.png" alt="image" style="display: block; margin: auto; zoom:70%;" />
-
+<div align="center">
+    <img src="image/flow.png" alt="image" style="zoom:70%;" />
+</div>
+   
 ## 2. Procedure
 
 ### ROI (Region Of Interest) 
@@ -79,7 +81,7 @@ the noise effect. The standard deviation of the x-direction and y-direction kern
 > $$G_\sigma(x,y)={1\over 2\pi\sigma^2}e^{-\Big({x^2\over 2\sigma_x^2}+{y^2\over 2\sigma_y^2}\Big)}$$
 
 <div align="center">
-    <img src="image/Gaussian.png" alt="image" style="zoom:60%;" />
+    <img src="image/Gaussian.png" alt="image" style="zoom:57%;" />
 </div>
 
 ### Canny Edge Detection
@@ -95,7 +97,7 @@ that occurs when only Sobel is used can be improved.<br>
 <br>
 3. Hysteresis edge tracking<br>
 When pixels with gradients between $T_{LOW}$ and $T_{HIGH}$ are connected, if they are connected to pixels with gradients 
-higher than $T_{HIGH}$ are determined as edges.
+higher than $T_{HIGH}$ are determined as edges. <br>
 
 
 <div align="center">
@@ -133,9 +135,13 @@ Additionally, the vanishing point where the two lanes meet can be found by using
 > $$X_{vanish}={b_l-b_r\over a_r-a_l}$$
 > $$Y_{vanish}=(a_r\cdot X_{vanish}+b_r)=(a_l\cdot X_{vanish}+b_l)$$
 
-<img src="image/Linear_regression.png" alt="image" style="display: block; margin: auto; zoom:70%;" /><br>
-<img src="image/get_one_lane.png" alt="image" style="display: block; margin: auto; zoom:64.5%;" /><br>
+<div align="center">
+    <img src="image/Linear_regression.png" alt="image" style="zoom:70%;" />
+</div>
 
+<div align="center">
+    <img src="image/get_one_lane.png" alt="image" style="zoom:70%;" />
+</div>
 
 
 
@@ -147,8 +153,9 @@ Additionally, the vanishing point where the two lanes meet can be found by using
 
 The result of lane detection is shown with lines and vanishing point in Figure 6. 
 
-<img src="image/Result.png" alt="image" style="display: block; margin: auto; zoom:70%;" /><br>
-
+<div align="center">
+    <img src="image/Result.png" alt="image" style="zoom:70%;" />
+</div>
 **Demo Video: [Youtube](https://youtu.be/gZ0gcyRrom4)**
 
 
