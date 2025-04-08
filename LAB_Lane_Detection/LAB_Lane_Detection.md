@@ -112,7 +112,7 @@ The probabilistic Hough transform `HouglinesP` randomly extracts coordinates to 
 For each edge of the image, increase the vote at $H[\rho_k, \theta_k]$ for each $\rho$ and $\theta$ obtained.
 And find where $\hat H[\hat \rho, \hat \theta]$ score is at maximum. The detected line in the image  is given by $x=\hat \rho (cos\hat \theta), y=\hat \rho (sin\hat \theta)$.
 <div align="center">
-    <img src="image/accumulate.png" alt="image" style="zoom:50%;" />
+    <img src="image/accumulate.png" alt="image" style="zoom:40%;" />
 </div>
 
 <div align="center">
