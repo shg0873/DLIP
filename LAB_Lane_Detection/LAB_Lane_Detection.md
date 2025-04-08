@@ -94,7 +94,6 @@ Eliminate the phenomenon where one edge is expressed by multiple pixels, only pi
 are set as edge pixels. Therefore, two pixels located in the gradient direction are examined to check if they are local maximums.
 NMS is applied based on the direction of the gradient, a single edge can be selected. In other words, the thick edge problem 
 that occurs when only Sobel is used can be improved.<br>
-<br>
 3. Hysteresis edge tracking<br>
 When pixels with gradients between $T_{LOW}$ and $T_{HIGH}$ are connected, if they are connected to pixels with gradients 
 higher than $T_{HIGH}$ are determined as edges. <br>
@@ -113,7 +112,7 @@ The probabilistic Hough transform `HouglinesP` randomly extracts coordinates to 
 For each edge of the image, increase the vote at $H[\rho_k, \theta_k]$ for each $\rho$ and $\theta$ obtained.
 And find where $\hat H[\hat \rho, \hat \theta]$ score is at maximum. The detected line in the image  is given by $x=\hat \rho (cos\hat \theta), y=\hat \rho (sin\hat \theta)$.
 <div align="center">
-    <img src="image/accumulate.png" alt="image" style="zoom:60%;" />
+    <img src="image/accumulate.png" alt="image" style="zoom:50%;" />
 </div>
 
 <div align="center">
