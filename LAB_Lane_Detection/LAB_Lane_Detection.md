@@ -59,7 +59,7 @@ Additionally, the vanishing point and the left and right lane approximation equa
 The image below is a flowchart representing the entire algorithm process.
 
 <div align="center">
-    <img src="image/flow.png" alt="image" style="zoom:70%;" />
+    <img src="image/flow.png" alt="image"  width="500" />
 </div>
    
 ## 2. Procedure
@@ -69,7 +69,7 @@ The purpose of this report is lane detection, the road area is set as the region
 and lane detection are attempted in this ROI. 
 
 <div align="center">
-    <img src="image/ROI.png" alt="image" style="zoom:70%;" />
+    <img src="image/ROI.png" alt="image" width="500" />
 </div>
 
 
@@ -81,7 +81,7 @@ the noise effect. The standard deviation of the x-direction and y-direction kern
 > $$G_\sigma(x,y)={1\over 2\pi\sigma^2}e^{-\Big({x^2\over 2\sigma_x^2}+{y^2\over 2\sigma_y^2}\Big)}$$
 
 <div align="center">
-    <img src="image/Gaussian.png" alt="image" style="zoom:57%;" />
+    <img src="image/Gaussian.png" alt="image" width="500" />
 </div>
 
 ### Canny Edge Detection
@@ -100,7 +100,7 @@ higher than $T_{HIGH}$ are determined as edges. <br>
 
 
 <div align="center">
-    <img src="image/Canny.png" alt="image" style="zoom:70%;" />
+    <img src="image/Canny.png" alt="image" width="500" />
 </div>
 
 ### HoughlinesP
@@ -112,11 +112,11 @@ The probabilistic Hough transform `HouglinesP` randomly extracts coordinates to 
 For each edge of the image, increase the vote at $H[\rho_k, \theta_k]$ for each $\rho$ and $\theta$ obtained.
 And find where $\hat H[\hat \rho, \hat \theta]$ score is at maximum. The detected line in the image  is given by $x=\hat \rho (cos\hat \theta), y=\hat \rho (sin\hat \theta)$.
 <div align="center">
-   <img src="image/accumulate.png" alt="image" width="300"/>
+   <img src="image/accumulate.png" alt="image" width="500"/>
 </div>
 
 <div align="center">
-    <img src="image/HoughlinesP.png" alt="image" width="300"/>
+    <img src="image/HoughlinesP.png" alt="image" width="500"/>
 </div>
 
 ### Linear regression
@@ -138,11 +138,11 @@ Additionally, the vanishing point where the two lanes meet can be found by using
 > $$Y_{vanish}=(a_r\cdot X_{vanish}+b_r)=(a_l\cdot X_{vanish}+b_l)$$
 
 <div align="center">
-    <img src="image/Linear_regression.png" alt="image" style="zoom:70%;" />
+    <img src="image/Linear_regression.png" alt="image" width="500" />
 </div>
 
 <div align="center">
-    <img src="image/get_one_lane.png" alt="image" style="zoom:67%;" />
+    <img src="image/get_one_lane.png" alt="image" width="500" />
 </div>
 
 
@@ -156,7 +156,7 @@ Additionally, the vanishing point where the two lanes meet can be found by using
 The result of lane detection is shown with lines and vanishing point in Figure 6. 
 
 <div align="center">
-    <img src="image/Result.png" alt="image" style="zoom:70%;" />
+    <img src="image/Result.png" alt="image" width="500" />
 </div>
 
 **Demo Video: [Youtube](https://youtu.be/gZ0gcyRrom4)**
