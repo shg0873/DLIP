@@ -343,8 +343,8 @@ line(src, vanishing_point, Point(vanishing_point.x, src.rows), Scalar(255, 0, 0)
 ### 4. Linear Regression
 1. Given data points $(x_1,y_1), (x_2,y_2),\cdots, (x_m,y_m)$ <br><br>
 2. 1th degree polynomial $y=c_0x+c_1$<br><br>
-3. $A = \begin{bmatrix} x_1^1 & x_1^0 \\ x_2^1 & x_2^0 \\ \vdots & \vdots \\ x_m^1 & x_m^0 \end{bmatrix}, Y=\begin{bmatrix}y_1\\y_2\\\vdots\\y_m\end{bmatrix}$ <br><br>
-4. $A^TA\cdot C=A^TY$$   $$C=(A^TA)^{-1}A^TY$
+3. $A = \begin{bmatrix} x_1^1 & x_1^0 \\ x_2^1 & x_2^0 \\ \vdots & \vdots \\ x_m^1 & x_m^0 \end{bmatrix}$, Y=\begin{bmatrix}y_1\\y_2\\\vdots\\y_m\end{bmatrix}$ <br><br>
+4. $A^TA\cdot C=A^TY$  $C=(A^TA)^{-1}A^TY$
 >```c++
 > Mat polyFit(const cv::Mat& X_, const cv::Mat& Y_, int n)
 > ```
